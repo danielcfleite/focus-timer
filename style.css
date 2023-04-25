@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --bg-color: #252525;
+    --bg-button: #adadb1
+  
+    --base-color: 194;
+    --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+    --primary-color: hsl(var(--base-color), 100%, 63%);
+  
+    --text-color: #FFFFFF;
+  
+    font-size: 62.5%;
+  }
+
+  body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+  }
+
+  #gradient {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 20vh;
+}
+
+  #page{
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+  }
+
+  #Camada_1{
+    position: fixed;
+    top: 2vh;
+    width: 70vw;
+  }
+
+  @keyframes fill {
+    0% {
+      fill: none;
+      opacity: 0%}
+
+    100% {fill:white; opacity: 100%}
+  }
+
+  #main-timer{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  #controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .controll-button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .sounds{
+    height: 15vh;
+    width: 15vw;
+    background-color: rgba(233, 233, 233, 0.9) ;
+    border-radius: 24px;
+    border: none;
+    color: #9c38e8;
+    transition: 0.3s;
+  }
+
+  .sounds:hover{
+    -webkit-box-shadow: inset 9px 3px 73px -41px rgba(214, 50, 254, 0.7);
+    -moz-box-shadow: inset 9px 3px 73px -41px rgba(214, 50, 254, 0.7);
+    box-shadow: inset 9px 3px 73px -41px rgba(181, 101, 250, 0.7);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  #sounds{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  span{
+    font-size: 20rem;
+    opacity: 0.9;
+  }
+
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
