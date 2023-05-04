@@ -1,52 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Option 1: Include in HTML -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Focus Timer</title>
-</head>
-<body>
+  </head>
+  <body class="dark" id="body">
     <main>
-        <div id="gradient"> </div>
-        <div id="page">
+      <div id="gradient"></div>
+      <button id="darkToggle">
+        <i class="bi bi-moon hidden" id="moon"></i
+        ><i class="bi bi-sun" id="sun"></i>
+      </button>
+      <div id="page">
         <div id="main-timer">
-        <div id="timer">
+          <div id="timer">
             <span class="minutes">25</span>
-            <span>:</span>
+            <span class="dots">:</span>
             <span class="seconds">00</span>
           </div>
           <div id="controls">
-          <button class="play controll-button">
-            <img src="./images/play.svg">
-          </button>
-          <button class="stop controll-button">
-            <img src="./images/stop.svg">
-          </button>
-          <button class="plus controll-button">
-            <img src="./images/+.svg">
-          </button>
-          <button class="minus controll-button">
-            <img src="./images/-.svg">
-          </button>
-        </div>
+            <button class="play controll-button">
+              <img src="./images/play.svg" />
+            </button>
+            <button class="stop controll-button">
+              <img src="./images/stop.svg" />
+            </button>
+            <button class="plus controll-button">
+              <img src="./images/+.svg" />
+            </button>
+            <button class="minus controll-button">
+              <img src="./images/-.svg" />
+            </button>
+          </div>
         </div>
         <div id="sounds">
+          <div id="forest-config">
+            <div class="volume-bar">
+              <div class="middle">
+                <div class="slider-container">
+                  <span class="bar"><span class="fill"></span></span>
+                  <input
+                    id="slider"
+                    class="slider"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                  />
+                </div>
+              </div>
+              <i class="bi bi-volume-up"></i>
+            </div>
             <button class="sounds forest">
-                <img src="./images/forest.svg">
+              <img src="./images/forest.svg" />
             </button>
-            <button class="sounds rain">
-                <img src="./images/rain.svg">
-            </button>
-            <button class="sounds cafeteria">
-                <img src="./images/shop.svg">
-            </button>
-            <button class="sounds campfire">
-                <img src="./images/campfire.svg">
-            </button>
+          </div>
+          <button class="sounds rain">
+            <img src="./images/rain.svg" />
+          </button>
+          <button class="sounds cafeteria">
+            <img src="./images/shop.svg" />
+          </button>
+          <button class="sounds campfire">
+            <img src="./images/campfire.svg" />
+          </button>
         </div>
-    </div>
+      </div>
     </main>
     <script src="./javascript/app.js" type="module"></script>
-</body>
+  </body>
 </html>
